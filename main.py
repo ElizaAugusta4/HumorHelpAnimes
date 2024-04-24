@@ -1,13 +1,21 @@
-from coletar_infos import coletar_informacoes;
-from sugerir_animes import sugerir_animes;
+from coletar_infos import dadosTeste;
+import time
 
 def main():
-    informacoes = coletar_informacoes()
-    sugeridos = sugerir_animes(informacoes)
 
-    print("Com base nas suas preferências, aqui estão algumas sugestões de animes:")
-    for genero in sugeridos:
-        print(genero)
+    def tempo():
+        time.sleep(3)
+
+    print("\nBem-vindo ao quiz de animes!!!!\n")
+
+    tempo()
+    print("Responda com 's' ou 'sim' para sim e 'n' ou 'não' para não.\n")
+    tempo()
+    print("Vamos começar!!!\n\n\n")
+    tempo()
+
+    informacoes = dadosTeste()
+
 
 if __name__ == "__main__":
     main()

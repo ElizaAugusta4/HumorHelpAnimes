@@ -1,46 +1,340 @@
-def coletar_informacoes():
-    print("Você assiste anime quando está feliz? (sim/não)")
-    feliz = input().lower()
-    print("Você assiste Shounen quando está feliz? (sim/não)")
-    shounen_feliz = input().lower()
-    print("Você assiste anime quando está triste? (sim/não)")
-    triste = input().lower()
-    print("Você assiste Shounen quando está triste? (sim/não)")
-    shounen_triste = input().lower()
-    print("Você assiste anime para se sentir melhor? (sim/não)")
-    sentir_melhor = input().lower()
-    print("Você assiste anime para se sentir mais relaxado? (sim/não)")
-    sentir_relaxado = input().lower()
-    print("Você assiste anime com uma abordagem mais séria? (sim/não)")
-    abordagem_seria = input().lower()
-    print("Você assiste anime com uma abordagem mais leve e divertida? (sim/não)")
-    abordagem_leve = input().lower()
-    print("Você assiste anime com uma abordagem mais realista? (sim/não)")
-    abordagem_realista = input().lower()
-    print("Você assiste anime com uma abordagem mais fantástica? (sim/não)")
-    abordagem_fantastica = input().lower()
-    print("Você assiste anime com uma abordagem mais positiva? (sim/não)")
-    abordagem_positiva = input().lower()
-    print("Você assiste anime com uma abordagem mais sombria? (sim/não)")
-    abordagem_sombria = input().lower()
-    print("Você assiste anime com uma trama que se desenvolve ao longo do tempo? (sim/não)")
-    desenvolvimento_tempo = input().lower()
-    print("Você assiste anime com uma trama que se desenrola rapidamente? (sim/não)")
-    desenvolvimento_rapido = input().lower()
+from sugerir_animes import *;
 
-    return {
-        'feliz': feliz,
-        'shounen_feliz': shounen_feliz,
-        'triste': triste,
-        'shounen_triste': shounen_triste,
-        'sentir_melhor': sentir_melhor,
-        'sentir_relaxado': sentir_relaxado,
-        'abordagem_seria': abordagem_seria,
-        'abordagem_leve': abordagem_leve,
-        'abordagem_realista': abordagem_realista,
-        'abordagem_fantastica': abordagem_fantastica,
-        'abordagem_positiva': abordagem_positiva,
-        'abordagem_sombria': abordagem_sombria,
-        'desenvolvimento_tempo': desenvolvimento_tempo,
-        'desenvolvimento_rapido': desenvolvimento_rapido
-    }
+
+def fazer_pergunta(pergunta):
+    resposta = input(pergunta + " (sim/s ou não/n): ").lower()
+    if resposta == "sim" or resposta == "s":
+        return True
+    elif resposta == "não" or resposta == "nao" or resposta == "n":
+        return False
+    else:
+        print("Resposta inválida. Por favor, responda com 'sim'/'s' ou 'não'/'n'.")
+        return fazer_pergunta(pergunta)
+
+
+def dadosTeste():
+    if fazer_pergunta("Você assiste anime quando está feliz?"):
+        if fazer_pergunta("Você assiste Shounen quando está feliz?"):
+            if fazer_pergunta("Você assiste Seinen?"):
+                if fazer_pergunta("Você assiste ação?"):
+                    if fazer_pergunta("Você assiste Isekai?"):
+                        if fazer_pergunta("Você assiste Sci-fi?"):
+                            lista_animes.update(lista_animes_shounen)
+                            lista_animes.update(lista_animes_seinen)
+                            lista_animes.update(lista_animes_acao)
+                            lista_animes.update(lista_animes_sci_fi)
+                            exibir_lista_animes(lista_animes)
+                            if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                return print("Sucesso, animes recomendados com exito")
+                            else:
+                                return print("Infelizmente não cosneguimos ajudar no momento :(")
+                        else:
+                            lista_animes.update(lista_animes_shounen)
+                            lista_animes.update(lista_animes_seinen)
+                            lista_animes.update(lista_animes_acao)
+                            lista_animes.update(lista_animes_isekai)
+                            exibir_lista_animes(lista_animes)
+                            if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                return print("Sucesso, animes recomendados com exito")
+                            else:
+                                return print("Infelizmente não cosneguimos ajudar no momento :(")
+                    else:
+                        lista_animes.update(lista_animes_shounen)
+                        lista_animes.update(lista_animes_seinen)
+                        lista_animes.update(lista_animes_acao)
+                        exibir_lista_animes(lista_animes)
+                        if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                            return print("Sucesso, animes recomendados com exito")
+                        else:
+                            return print("Infelizmente não cosneguimos ajudar no momento :(")
+                else:
+                    lista_animes.update(lista_animes_shounen)
+                    lista_animes.update(lista_animes_seinen)
+                    exibir_lista_animes(lista_animes)
+                    if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                        return print("Sucesso, animes recomendados com exito")
+                    else:
+                        if fazer_pergunta("Que tal animes mais leves?"):
+                            if fazer_pergunta("Que tal Aventura?"):
+                                if fazer_pergunta("Que tal Comédia?"):
+                                    lista_animes.update(lista_animes_aventura)
+                                    lista_animes.update(lista_animes_comedia)
+                                    exibir_lista_animes(lista_animes)
+                                    if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                        return print("Sucesso, animes recomendados com exito")
+                                    else:
+                                        return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                else:
+                                    exibir_lista_animes(lista_animes_aventura)
+                                    if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                        return print("Sucesso, animes recomendados com exito")
+                                    else:
+                                        return print("Infelizmente não cosneguimos ajudar no momento :(")
+                            else:
+                                if fazer_pergunta("Que tal de Faroeste?"):
+                                    exibir_lista_animes(lista_animes_faroeste)
+                                    if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                        return print("Sucesso, animes recomendados com exito")
+                                    else:
+                                        return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                else:
+                                    return print("Infelizmente não cosneguimos ajudar no momento :(")
+                        else:
+                            return print("Infelizmente não cosneguimos ajudar no momento :(")
+            else:
+                if fazer_pergunta("Você assiste Josei?"):
+                    exibir_lista_animes(lista_animes_josei)
+                    if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                        return print("Sucesso, animes recomendados com exito")
+                    else:
+                        return print("Infelizmente não cosneguimos ajudar no momento :(")
+                else:
+                    if fazer_pergunta("Você assiste Kodomo?"):
+                        exibir_lista_animes(lista_animes_kodomo)
+                        if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                            return print("Sucesso, animes recomendados com exito")
+                        else:
+                            return print("Infelizmente não cosneguimos ajudar no momento :(")
+                    else:
+                        return print("Infelizmente não cosneguimos ajudar no momento :(")
+        else:
+            if fazer_pergunta("Você assiste Gêneros alternativos?"):
+                if fazer_pergunta("Você assiste Shoujo quando está feliz?"):
+                    if fazer_pergunta("Você assiste ação?"):
+                        if fazer_pergunta("Você assiste Isekai?"):
+                            if fazer_pergunta("Você assiste Sci-fi?"):
+                                lista_animes.update(lista_animes_shounen)
+                                lista_animes.update(lista_animes_seinen)
+                                lista_animes.update(lista_animes_acao)
+                                lista_animes.update(lista_animes_sci_fi)
+                                exibir_lista_animes(lista_animes)
+                                if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                    return print("Sucesso, animes recomendados com exito")
+                                else:
+                                    return print("Infelizmente não cosneguimos ajudar no momento :(")
+                            else:
+                                lista_animes.update(lista_animes_shounen)
+                                lista_animes.update(lista_animes_seinen)
+                                lista_animes.update(lista_animes_acao)
+                                lista_animes.update(lista_animes_isekai)
+                                exibir_lista_animes(lista_animes)
+                                if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                    return print("Sucesso, animes recomendados com exito")
+                                else:
+                                    return print("Infelizmente não cosneguimos ajudar no momento :(")
+                        else:
+                            lista_animes.update(lista_animes_shounen)
+                            lista_animes.update(lista_animes_seinen)
+                            lista_animes.update(lista_animes_acao)
+                            exibir_lista_animes(lista_animes)
+                            if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                return print("Sucesso, animes recomendados com exito")
+                            else:
+                                return print("Infelizmente não cosneguimos ajudar no momento :(")
+                    else:
+                        lista_animes.update(lista_animes_shounen)
+                        lista_animes.update(lista_animes_seinen)
+                        exibir_lista_animes(lista_animes)
+                        if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                            return print("Sucesso, animes recomendados com exito")
+                        else:
+                            if fazer_pergunta("Que tal animes mais leves?"):
+                                if fazer_pergunta("Que tal Aventura?"):
+                                    if fazer_pergunta("Que tal Comédia?"):
+                                        lista_animes.update(lista_animes_aventura)
+                                        lista_animes.update(lista_animes_comedia)
+                                        exibir_lista_animes(lista_animes)
+                                        if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                            return print("Sucesso, animes recomendados com exito")
+                                        else:
+                                            return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                    else:
+                                        exibir_lista_animes(lista_animes_aventura)
+                                        if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                            return print("Sucesso, animes recomendados com exito")
+                                        else:
+                                            return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                else:
+                                    if fazer_pergunta("Que tal de Faroeste?"):
+                                        exibir_lista_animes(lista_animes_faroeste)
+                                        if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                            return print("Sucesso, animes recomendados com exito")
+                                        else:
+                                            return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                    else:
+                                        return print("Infelizmente não cosneguimos ajudar no momento :(")
+                            else:
+                                return print("Infelizmente não cosneguimos ajudar no momento :(")
+            else:
+                if fazer_pergunta("Você assiste Kodomo?"):
+                    exibir_lista_animes(lista_animes_kodomo)
+                    if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                        return print("Sucesso, animes recomendados com exito")
+                    else:
+                        return print("Infelizmente não cosneguimos ajudar no momento :(")
+                else:
+                    return print("Infelizmente não cosneguimos ajudar no momento :(")
+    else:
+        if fazer_pergunta("Você assiste anime quando está triste?"):
+            if fazer_pergunta("Você assiste Shounen quando está triste?"):
+                if fazer_pergunta("Você assiste Seinen?"):
+                    if fazer_pergunta("Você assiste Drama?"):
+                        if fazer_pergunta("Você assiste Isekai?"):
+                            if fazer_pergunta("Você assiste Sci-fi?"):
+                                lista_animes.update(lista_animes_shounen)
+                                lista_animes.update(lista_animes_seinen)
+                                lista_animes.update(lista_animes_drama)
+                                lista_animes.update(lista_animes_sci_fi)
+                                exibir_lista_animes(lista_animes)
+                                if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                    return print("Sucesso, animes recomendados com exito")
+                                else:
+                                    return print("Infelizmente não cosneguimos ajudar no momento :(")
+                            else:
+                                lista_animes.update(lista_animes_shounen)
+                                lista_animes.update(lista_animes_seinen)
+                                lista_animes.update(lista_animes_drama)
+                                lista_animes.update(lista_animes_isekai)
+                                exibir_lista_animes(lista_animes)
+                                if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                    return print("Sucesso, animes recomendados com exito")
+                                else:
+                                    return print("Infelizmente não cosneguimos ajudar no momento :(")
+                        else:
+                            lista_animes.update(lista_animes_shounen)
+                            lista_animes.update(lista_animes_seinen)
+                            lista_animes.update(lista_animes_drama)
+                            exibir_lista_animes(lista_animes)
+                            if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                return print("Sucesso, animes recomendados com exito")
+                            else:
+                                return print("Infelizmente não cosneguimos ajudar no momento :(")
+                    else:
+                        lista_animes.update(lista_animes_shounen)
+                        lista_animes.update(lista_animes_seinen)
+                        exibir_lista_animes(lista_animes)
+                        if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                            return print("Sucesso, animes recomendados com exito")
+                        else:
+                            if fazer_pergunta("Que tal animes mais leves?"):
+                                if fazer_pergunta("Que tal Romance?"):
+                                    if fazer_pergunta("Que tal Fantasia?"):
+                                        lista_animes.update(lista_animes_romance)
+                                        lista_animes.update(lista_animes_fantasia)
+                                        exibir_lista_animes(lista_animes)
+                                        if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                            return print("Sucesso, animes recomendados com exito")
+                                        else:
+                                            return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                    else:
+                                        exibir_lista_animes(lista_animes_romance)
+                                        if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                            return print("Sucesso, animes recomendados com exito")
+                                        else:
+                                            return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                else:
+                                    if fazer_pergunta("Que tal de vida_escolar?"):
+                                        exibir_lista_animes(lista_animes_vida_escolar)
+                                        if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                            return print("Sucesso, animes recomendados com exito")
+                                        else:
+                                            return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                    else:
+                                        return print("Infelizmente não cosneguimos ajudar no momento :(")
+                            else:
+                                return print("Infelizmente não cosneguimos ajudar no momento :(")
+                else:
+                    if fazer_pergunta("Você assiste Josei?"):
+                        exibir_lista_animes(lista_animes_josei)
+                        if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                            return print("Sucesso, animes recomendados com exito")
+                        else:
+                            return print("Infelizmente não cosneguimos ajudar no momento :(")
+                    else:
+                        if fazer_pergunta("Você assiste Kodomo?"):
+                            exibir_lista_animes(lista_animes_kodomo)
+                            if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                return print("Sucesso, animes recomendados com exito")
+                            else:
+                                return print("Infelizmente não cosneguimos ajudar no momento :(")
+                        else:
+                            return print("Infelizmente não cosneguimos ajudar no momento :(")
+            else:
+                if fazer_pergunta("Você assiste Gêneros alternativos?"):
+                    if fazer_pergunta("Você assiste Shoujo quando está triste?"):
+                        if fazer_pergunta("Você assiste Drama?"):
+                            if fazer_pergunta("Você assiste Isekai?"):
+                                if fazer_pergunta("Você assiste Sci-fi?"):
+                                    lista_animes.update(lista_animes_shounen)
+                                    lista_animes.update(lista_animes_seinen)
+                                    lista_animes.update(lista_animes_drama)
+                                    lista_animes.update(lista_animes_sci_fi)
+                                    exibir_lista_animes(lista_animes)
+                                    if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                        return print("Sucesso, animes recomendados com exito")
+                                    else:
+                                        return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                else:
+                                    lista_animes.update(lista_animes_shounen)
+                                    lista_animes.update(lista_animes_seinen)
+                                    lista_animes.update(lista_animes_drama)
+                                    lista_animes.update(lista_animes_isekai)
+                                    exibir_lista_animes(lista_animes)
+                                    if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                        return print("Sucesso, animes recomendados com exito")
+                                    else:
+                                        return print("Infelizmente não cosneguimos ajudar no momento :(")
+                            else:
+                                lista_animes.update(lista_animes_shounen)
+                                lista_animes.update(lista_animes_seinen)
+                                lista_animes.update(lista_animes_drama)
+                                exibir_lista_animes(lista_animes)
+                                if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                    return print("Sucesso, animes recomendados com exito")
+                                else:
+                                    return print("Infelizmente não cosneguimos ajudar no momento :(")
+                        else:
+                            lista_animes.update(lista_animes_shounen)
+                            lista_animes.update(lista_animes_seinen)
+                            exibir_lista_animes(lista_animes)
+                            if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                return print("Sucesso, animes recomendados com exito")
+                            else:
+                                if fazer_pergunta("Que tal animes mais leves?"):
+                                    if fazer_pergunta("Que tal Romance?"):
+                                        if fazer_pergunta("Que tal Fantasia?"):
+                                            lista_animes.update(lista_animes_romance)
+                                            lista_animes.update(lista_animes_fantasia)
+                                            exibir_lista_animes(lista_animes)
+                                            if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                                return print("Sucesso, animes recomendados com exito")
+                                            else:
+                                                return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                        else:
+                                            exibir_lista_animes(lista_animes_romance)
+                                            if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                                return print("Sucesso, animes recomendados com exito")
+                                            else:
+                                                return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                    else:
+                                        if fazer_pergunta("Que tal de Vida_escolar?"):
+                                            exibir_lista_animes(lista_animes_vida_escolar)
+                                            if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                                return print("Sucesso, animes recomendados com exito")
+                                            else:
+                                                return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                        else:
+                                            return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                else:
+                                    return print("Infelizmente não cosneguimos ajudar no momento :(")
+                else:
+                    if fazer_pergunta("Você assiste Kodomo?"):
+                        exibir_lista_animes(lista_animes_kodomo)
+                        if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                            return print("Sucesso, animes recomendados com exito")
+                        else:
+                            return print("Infelizmente não cosneguimos ajudar no momento :(")
+                    else:
+                        return print("Infelizmente não cosneguimos ajudar no momento :(")
+        else:
+            print("Encerrando o quiz...")
