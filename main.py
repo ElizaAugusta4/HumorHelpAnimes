@@ -24,12 +24,6 @@ def main():
     print("Vamos começar!!!\n\n\n")
     tempo()
     informacoes = dadosTeste()
-    if(informacoes == "sim" or informacoes == "s" 
-    or informacoes == "nao" or informacoes == "n"):
-        informacoes = dadosTeste() # Supondo que quizTest agora retorne True ou False
-    else:
-        print("Resposta inválida, reponda com 's' ou 'sim' para sim e 'n' ou 'nao' para não.")
-
 
 
 if __name__ == "__main__":

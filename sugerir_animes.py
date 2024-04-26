@@ -10,88 +10,102 @@ lista_animes_shounen = {
     "Bleach": "animes/bleach.jpeg"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_shoujo = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Sailor Moon": "url_imagem_1",
+    "Cardcaptor Sakura": "url_imagem_2",
+    "Fairy Tail": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_seinen = {
-    "Anime seinen 1": "url_imagem_1",
-    "Anime seinen 2": "url_imagem_2",
-    "Anime seinen 3": "url_imagem_3"
+    "Death Note": "url_imagem_1",
+    "Monster": "url_imagem_2",
+    "Ghost in the Shell": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_josei = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "The Promised Neverland": "url_imagem_1",
+    "Your Name": "url_imagem_2",
+    "The Garden of Words": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_kodomo = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Pokémon": "url_imagem_1",
+    "Yu-Gi-Oh!": "url_imagem_2",
+    "Digimon": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_isekai = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Overlord": "url_imagem_1",
+    "Re:Zero": "url_imagem_2",
+    "Tate no Yuusha no Nariagari": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_vida_escolar = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "GTO": "url_imagem_1",
+    "Assassination Classroom": "url_imagem_2",
+    "Mirai Nikki": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_comedia = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "AoTenshi": "url_imagem_1",
+    "Genshiken": "url_imagem_2",
+    "Azumanga Daioh": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_aventura = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "One Piece": "url_imagem_1",
+    "Naruto": "url_imagem_2",
+    "Attack on Titan": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_acao = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Naruto": "url_imagem_1",
+    "One Piece": "url_imagem_2",
+    "Attack on Titan": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_romance = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Clannad": "url_imagem_1",
+    "Steins;Gate": "url_imagem_2",
+    "Your Name": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_fantasia = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Sailor Moon": "url_imagem_1",
+    "Fairy Tail": "url_imagem_2",
+    "The Irregular at Magic High School": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_sci_fi = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Death Note": "url_imagem_1",
+    "Ghost in the Shell": "url_imagem_2",
+    "Neon Genesis Evangelion": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_faroeste = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Cowboy Bebop": "url_imagem_1",
+    "Samurai Champloo": "url_imagem_2",
+    "Astro Boy": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
+
 lista_animes_drama = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Death Note": "url_imagem_1",
+    "Monster": "url_imagem_2",
+    "Ghost in the Shell": "url_imagem_3"
     # Adicione mais animes conforme necessário
 }
 
@@ -100,9 +114,5 @@ lista_animes = {}
 base_path = os.path.abspath("animes") + os.sep
 
 def exibir_lista_animes(lista):
-    for anime, filename in lista.items():
-        print(anime)
-        img = Image.open(filename)
-        img.show()
-
-
+    for anime in lista.items():
+        print(anime[0])
