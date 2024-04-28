@@ -7,91 +7,127 @@ import os
 lista_animes_shounen = {
     "Naruto": "animes/naruto.jpeg",
     "One Piece": "animes/one piece.jpeg",
-    "Bleach": "animes/bleach.jpeg"
+    "Bleach": "animes/bleach.jpeg",
+    "Dragon Ball": "animes/dragon ball.jpeg",
+    "Demon Slayer": ""
+
     # Adicione mais animes conforme necessário
 }
 lista_animes_shoujo = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Pretty Guardian Sailor Moon": "",
+    "Cardcaptor Sakura": "",
+    "Puella Magi Madoka Magica": "",
+    "Shugo Chara! ": "",
+    "Princess Tutu": ""
     # Adicione mais animes conforme necessário
 }
 lista_animes_seinen = {
-    "Anime seinen 1": "url_imagem_1",
-    "Anime seinen 2": "url_imagem_2",
-    "Anime seinen 3": "url_imagem_3"
+    "Golden Kamuy": "",
+    "Akira": "",
+    "One Punch Man": "",
+    "Orange": "",
+    "Seishun Buta Yarō": ""
     # Adicione mais animes conforme necessário
 }
 lista_animes_josei = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Descending Stories: Showa Genroku Rakugo Shinju": "",
+    "Chihayafuru": "",
+    "Nodame Cantabile. Paradise Kiss": "",
+    "Natsuyuki Rendezvous": "",
+    "Usagi Drop": ""
     # Adicione mais animes conforme necessário
 }
 lista_animes_kodomo = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Hamtaru": "",
+    "Pokemon": "",
+    "Beyblade": "",
+    "Doraemon ": "",
+    "Heidi": ""
     # Adicione mais animes conforme necessário
 }
 lista_animes_isekai = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "The Faraway Paladin": "",
+    "Mushoku Tensei: Jobless Reincarnation": "",
+    "Parallel World Pharmacy": "",
+    "Tensei Shitara Suraimu Datta Ken": "",
+    "Overlord": ""
     # Adicione mais animes conforme necessário
 }
 lista_animes_vida_escolar = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Little Witch Academia": "",
+    "The Familiar of Zero": "",
+    "The Irregular at Magic High School": "",
+    "Yamada-kun and the Seven Witches": "",
+    "Haikyu!": ""
     # Adicione mais animes conforme necessário
 }
 lista_animes_comedia = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Yamato Nadeshiko Shichihenge": "",
+    "Kaichou wa Maid-sama!: Omake da yo!": "",
+    "Kaichou wa Maid-sama!: Goshujinsama to Asonjao": "",
+    "Princess Princess": "",
+    "Vampire Knight: Gekiai no Portrait": ""
     # Adicione mais animes conforme necessário
 }
 lista_animes_aventura = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Fullmetal Alchemist": "",
+    "Tensei Shitara Suraimu Datta Ken": "",
+    "The Seven Deadly Sins": "",
+    "Magi: The Labyrinth of Magic": "",
+    "Mo Dao Zu Shi": ""
     # Adicione mais animes conforme necessário
 }
 lista_animes_acao = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "D.N.Angel": "",
+    "Sabage-bu!": "",
+    "Hakkenden: Touhou Hakken Ibun": "",
+    "Honoo no Mirage": "",
+    "JoJo's Bizarre Adventure ": ""
     # Adicione mais animes conforme necessário
 }
 lista_animes_romance = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Yubisaki to Renren": "",
+    "3D Kanojo: Real Girl 2nd Season": "",
+    "My Love Story": "",
+    "Fruits Basket: Prelude": "",
+    "Versailles no Bara": "",
+    "Hiyokoi": ""
     # Adicione mais animes conforme necessário
 }
 lista_animes_fantasia = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Fruits Basket ": "",
+    "X": "",
+    "Shugo Chara! Party!": "",
+    "Mayonaka no Occult Koumuin": "",
+    "Fairy Tail": ""
     # Adicione mais animes conforme necessário
 }
 lista_animes_sci_fi = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Orange": "",
+    "Tokyo Mew Mew": "",
+    "Orange: Mirai": "",
+    "7 Seeds": "",
+    "Kiseijū: Sei no Kakuritsu ": "",
+    "Serial Experiments Lain": ""
+
+
     # Adicione mais animes conforme necessário
 }
 lista_animes_faroeste = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Cowboy Bebop": "",
+    "Wild Arms – Twilight Venom": "",
+    "Grenadier": "",
+    "Gun x Sword": "",
+    "Trigun": ""
     # Adicione mais animes conforme necessário
 }
 lista_animes_drama = {
-    "Anime 1": "url_imagem_1",
-    "Anime 2": "url_imagem_2",
-    "Anime 3": "url_imagem_3"
+    "Fruits Basket: The Final": "",
+    "Vampire Knight Guilty": "",
+    "Fruits Basket: Prelude": "",
+    "Versailles no Bara": "",
+    "Kageki Shoujo!": ""
+
     # Adicione mais animes conforme necessário
 }
 
@@ -102,7 +138,7 @@ base_path = os.path.abspath("animes") + os.sep
 def exibir_lista_animes(lista):
     for anime, filename in lista.items():
         print(anime)
-        img = Image.open(filename)
-        img.show()
+    print("\n")
+    lista.clear()
 
 

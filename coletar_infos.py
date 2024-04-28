@@ -60,16 +60,16 @@ def dadosTeste():
                                     lista_animes.update(lista_animes_aventura)
                                     lista_animes.update(lista_animes_comedia)
                                     exibir_lista_animes(lista_animes)
-                                    if fazer_pergunta("Você ira assistir algum dessa lista?"):
+                                    if fazer_pergunta("\nVocê ira assistir algum dessa lista?\n"):
                                         return print("Sucesso, animes recomendados com exito")
                                     else:
-                                        return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                        return print("Infelizmente não conseguimos ajudar no momento :(")
                                 else:
                                     exibir_lista_animes(lista_animes_aventura)
                                     if fazer_pergunta("Você ira assistir algum dessa lista?"):
                                         return print("Sucesso, animes recomendados com exito")
                                     else:
-                                        return print("Infelizmente não cosneguimos ajudar no momento :(")
+                                        return print("Infelizmente não conseguimos ajudar no momento :(")
                             else:
                                 if fazer_pergunta("Que tal de Faroeste?"):
                                     exibir_lista_animes(lista_animes_faroeste)
